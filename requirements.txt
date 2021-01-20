@@ -1,4 +1,4 @@
--i https://pypi.tuna.tsinghua.edu.cn/simple
+-i https://mirrors.aliyun.com/pypi/simple/
 gensim==3.8.1
 jieba==0.39
 fastapi==0.62.0

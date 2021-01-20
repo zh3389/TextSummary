@@ -43,7 +43,7 @@ class Predictor():
 
 
 @app.get("/{text}")
-def read_item(text):
-    pre = Predictor()
+def read_item(text, max_len: int = 512):
+    pre = Predictor(max_len)
     result = pre.encoder(str(text))
     return result
