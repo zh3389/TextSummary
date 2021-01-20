@@ -2,10 +2,9 @@ import json
 import requests
 
 
-def get_text_summary(text):
-    upload_data = {"accept": "application/json",
-                   "Content-Type": "multipart/form-data"}
-    upload_res = requests.get("http://192.168.31.220:8000/{}".format(text), upload_data)
+def get_text_summary(text, max_len=512):
+    upload_data = {"accept": "application/json"}
+    upload_res = requests.get("http://192.168.31.220:8000/{}?max_len={}".format(text, max_len), upload_data)
     encoding = json.loads(upload_res.content, encoding="utf8")
     return encoding
 
